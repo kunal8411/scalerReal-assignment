@@ -14,7 +14,7 @@ const StripeCheckoutButton =({price})=>{
     return(
         <StripeCheckout 
         label='PAY-NOW'
-        name='CRWN Clothing Ltd.'
+        name='ScaleReal Cart'
         billingAddress
         shippingAddress
         image='https://sendeyo.com/up/d/f3eb2117da'
