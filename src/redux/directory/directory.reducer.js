@@ -3,22 +3,22 @@
 const INITIAL_STATE={
     sections:[
         {
-            title: 'hats',
-            imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+            title: 'mobile',
+            imageUrl: 'https://reviewbychoice.com/wp-content/uploads/2020/07/smart-phones.jpg',
             id: 1,
-            linkUrl: 'shop/hats'
+            linkUrl: 'shop/mobile'
           },
           {
-            title: 'jackets',
-            imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+            title: 'laptops',
+            imageUrl: 'https://cdn.mos.cms.futurecdn.net/enZ95BdJbdw5hDeBKcMMFe-768-80.jpg',
             id: 2,
-            linkUrl: 'shop/jackets'
+            linkUrl: 'shop/laptops'
           },
           {
-            title: 'sneakers',
-            imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+            title: 'sports',
+            imageUrl: 'https://www.abc.net.au/cm/rimage/12236578-16x9-large.jpg?v=2',
             id: 3,
-            linkUrl: 'shop/sneakers'
+            linkUrl: 'shop/sports'
           },
           {
             title: 'womens',
