@@ -7,8 +7,8 @@ const SHOP_DATA = {
       {
         id: 1,
         name: 'iPhone XR',
-        imageUrl: 'https://wallpapershome.com/images/wallpapers/iphone-xr-3840x2160-red-black-5k-smartphone-apple-september-2018-event-20350.jpg',
-        price: 4899
+        imageUrl: 'https://i.gadgets360cdn.com/products/large/1536782796_635_iphone_xr.jpg',
+        price: 89
       },
       {
         id: 2,
