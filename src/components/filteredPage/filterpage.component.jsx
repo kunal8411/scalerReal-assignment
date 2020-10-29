@@ -1,16 +1,13 @@
 import React from 'react'; 
-import './searchOverview.styles.css';
+
 import {connect} from 'react-redux';
-// import {FilteredSearch} from '../filtered-search/filtered-search.component'
+
 import {createStructuredSelector} from 'reselect'
-// import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
-import {selectItems} from '../../redux/items/items.selector';
-// import {selectCollections} from '../../redux/shop/shop.selectors';
-import DisaplaySearchproducts from '../displaySearchProducts/displaySearchProducts.component'
-// import SearchPreview from '../search-preview/search-preview.component'
-import {SearchBox} from '../search-box/search-box.component'
-// import {FilteredSearch} from '../filtered-search/filtered-search.component'
-class SearchOverview extends React.Component{
+import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
+
+import SearchPreview from '../search-preview/search-preview.component'
+
+class FilteredPage extends React.Component{
     constructor(){
         super();
         this.state={
@@ -34,19 +31,31 @@ class SearchOverview extends React.Component{
         //     collection.name.toLowerCase().includes(searchField.toLowerCase())
         // )))
         const filteredProducts = collections.filter(collection =>
-            collection.name.toLowerCase().includes(searchField.toLowerCase())
+            collection.title.toLowerCase().includes(searchField.toLowerCase())
         )
-        console.log(filteredProducts)
+        // console.log(filteredProducts)
         return(
             <div className='collection-overview'>
-                <h1>ALL PRODUCTS</h1>
-        <SearchBox
+                <h1>Filter Products by category</h1>
+        {/* <SearchBox
           placeholder='Search Product'
           handleChange= {this.handleChange}
-        />  
+        />   */}
+        Filter By
+        <select onChange={this.handleChange}>
+          <option value="">Select Any</option>
+          <option value="mobile">Mobiles</option>
+          <option value="laptops">Laptops</option>
+          <option value="sports">Sports</option>
+          <option value="womens">Womens</option>
+          <option value="mens">Mens</option>
+
+        </select> 
+
+
             {
-                filteredProducts.map(({id, name, price, imageUrl})=>(
-                    <DisaplaySearchproducts key={id} name={name} price={price} imageUrl={imageUrl} />
+                filteredProducts.map(({id, ...otherCollectionProps})=>(
+                    <SearchPreview key={id} {...otherCollectionProps} />
                      ))
             }
               
@@ -57,8 +66,8 @@ class SearchOverview extends React.Component{
 
 
 const mapStateToProps= createStructuredSelector({
-  collections:selectItems
+    collections:selectCollectionsForPreview
 })
 
 
-export default connect(mapStateToProps)(SearchOverview);
+export default connect(mapStateToProps)(FilteredPage);

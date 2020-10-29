@@ -38,13 +38,10 @@ class  SortItems extends React.Component{
         })
       }
     render(){
-        // const { items} = this.state;
-        // let sortedProductsAsc;
-        //   sortedProductsAsc= items.sort((a,b)=>{
-        //      return parseInt(a.price)  - parseInt(b.price);
-        //   })
+        
     return(
             <div>
+              <h3>Sort the products based on price</h3>
                 <div class="btn-group">
                 <button onClick={this.sortByPriceAsc}>ASCENDING</button>
                 <button onClick={this.sortByPriceDsc}>DESCENDING</button>

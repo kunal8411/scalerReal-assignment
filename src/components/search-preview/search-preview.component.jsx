@@ -7,15 +7,16 @@ const SearchPreview =(props)=>{
     // console.log("items",props.items)
     return(
      
-    <div className='cardlist'>
+    <div className='card-list'>
         
         <div className='card-list'>
             {
-                props.items
-                .map((item)=>(
-                    <FilteredSearch key={item.id} item={item} />
-                  
-                ))
+               props.items
+               .map((item)=>(
+                   <FilteredSearch key={item.id} item={item} />
+                 
+               ))
+            
             }
         </div>
 

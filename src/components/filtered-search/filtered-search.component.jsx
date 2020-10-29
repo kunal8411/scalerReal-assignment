@@ -1,11 +1,11 @@
 import React from 'react';
 import './filtered-search.styles.css'
 export  const FilteredSearch = ({item})=>{
-    console.log("item in filtered search componenent", item)
+    // console.log("item in filtered search componenent", item)
         
     return(
   <div className='product'>
-  <div className="card" >
+  <div className="card">
         
       <img src={item.imageUrl} alt=""/>
   
