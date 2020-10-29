@@ -16,7 +16,7 @@ export  const FilteredSearch = ({item})=>{
       <span>${item.price}</span>
       <p>{item.name}</p>
       
-      <button >Add to cart</button>
+      
   </div>
 </div>
 </div>

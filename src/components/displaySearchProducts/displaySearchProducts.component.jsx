@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Button} from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
 import './displaySearchProducts.styles.css'
 const DisaplaySearchproducts=({id, name, price, imageUrl})=>(
     <div class="container">
@@ -12,7 +12,7 @@ const DisaplaySearchproducts=({id, name, price, imageUrl})=>(
         <Card.Text>
             {price}
         </Card.Text>
-        <Button variant="primary">Add to cart</Button>
+        
         </Card.Body>
      </Card>
 
