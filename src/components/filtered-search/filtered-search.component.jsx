@@ -1,15 +1,24 @@
 import React from 'react';
 import './filtered-search.styles.css'
-export  const FilteredSearch = ({item, addItem})=>(
-    <div className="card-container">
+export  const FilteredSearch = ({item})=>{
+    console.log("item in filtered search componenent", item)
         
-      <img
-      src={`${item.imageUrl}?set=set2&size=180x180`}
-      alt="monster"
-        />
-        <h2>{item.name}</h2>
-        <p>{item.price}</p>
+    return(
+  <div className='product'>
+  <div className="card" >
         
-    </div>
-)
+      <img src={item.imageUrl} alt=""/>
+  
+  <div className="content">
+      <h3>
+          {item.price}
+      </h3>
+      <span>${item.price}</span>
+      <p>{item.name}</p>
+      
+      <button >Add to cart</button>
+  </div>
+</div>
+</div>
+)}
    

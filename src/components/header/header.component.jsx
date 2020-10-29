@@ -17,6 +17,7 @@ const Header= ({hidden})=>(
     <div className='options'>
         <Link className='option' to='/shop'>SHOP</Link>
         <Link className='option' to='/search' >SEARCH</Link>
+        <Link className='option' to='/sort' >SORT</Link>
         <Link className='option' to='/signin'>SIGN IN</Link>   
         <CartIcon/>
     </div>
